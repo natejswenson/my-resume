@@ -1,5 +1,5 @@
 let resumeData = {
-    "imagebaseurl":"https://natejswenson.github.io/",
+    "imagebaseurl":"https://natejswenson.github.io/my-resume",
     "name": "Nate J. Swenson",
     "role": "DevOps Engineering Leader",
     "linkedinId":"natejswenson",
