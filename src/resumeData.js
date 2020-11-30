@@ -1,26 +1,26 @@
 let resumeData = {
-    "imagebaseurl":"https://swenson11.github.io/",
+    "imagebaseurl":"https://natejswenson.github.io/",
     "name": "Nate J. Swenson",
     "role": "DevOps Engineering Leader",
-    "linkedinId":"swen407",
+    "linkedinId":"natejswenson",
     "skypeid": "",
     "roleDescription": " I have Implemented Zero downtime / high availability automated deployments using Jenkins; as well as a container based Jenkins architecture. I am highly skilled in architecting and implementing cloud based architecure.",
     "socialLinks":[
         {
           "name":"linkedin",
-          "url":"https://www.linkedin.com/in/swen407/",
+          "url":"https://www.linkedin.com/in/natejswenson/",
           "className":"fa fa-linkedin"
         },
         {
           "name":"github",
-          "url":"http://github.com/swenson11",
+          "url":"http://github.com/natejswenson",
           "className":"fa fa-github"
         },
       ],
     "aboutme":"Engineering servant leader with 10 years of experience and in Software Engineering and Agile transformation ( 4+ in healthcare). Currently leading a distributed DevOps team focused on maturing deployment practices within OptumServe.",
     "email":"swen407@gmail.com",
     "address":"Minnesota, USA",
-    "website":"https://swenson11.github.io",
+    "website":"https://natejswenson.github.io",
     "education":[
       {
         "UniversityName":"University of Minnesota",
@@ -83,6 +83,15 @@ let resumeData = {
         "skillname":"Docker"
       },
       {
+        "skillname":"NodeJS"
+      }, 
+      {
+        "skillname":"Ansible"
+      },
+      {
+        "skillname":"Jenkins"
+      },
+      {
         "skillname":"AWS"
       },
       {
@@ -92,24 +101,31 @@ let resumeData = {
     "portfolio":[
       {
         "name":"Annoy My Mom",
-        "description":"alexa" ,
-        "imgurl":"images/profilepic.jpg"
+        "description": "Top rated Alexa skill built using NodeJs.",
+        "imgurl":"images/Annoymymom.png",
+        "url":"https://github.com/natejswenson/AnnoyMyMom/"
       },
       {
-        "name":"project2",
-        "description":"mobileapp",
-        "imgurl":"images/profilepic.jpg"
+        "name":"My Coach",
+        "description":"Alexa skill build using NodeJS. My Coach offers motivation as you are guided through your choice of chest, legs, abs, and cardio workouts that can be done in around 7 minutes minutes and require no additional fitness equipment. To prevent boredom the exercises for each workout are on seven day rotations. **Each day after you complete a workout you will be notified of what tomorrows workout is** Also if you have suggestions for exercise you would like added in let me know, I'll listen. Below is one day of exercise:",
+        "imgurl":"images/mycoach.png",
+        "url":"https://github.com/natejswenson/MyCoach"
       },
       {
-        "name":"project3",
-        "description":"mobileapp",  
-        "imgurl":"images/profilepic.jpg"
-      }
+        "name":"Relaxing Plank",
+        "description":"Alexa Skill built using NodeJs. Plank workout with relaxing ocean sounds playing in the background to allows you to meditate while you workout.",  
+        "imgurl":"images/relaxingplank.png"
+      },
+      {
+        "name":"Git Hub",
+        "description":"Check it out; my goal for 2021 is to be active every day!",  
+        "imgurl":"images/github.png"
+      },
     ],
     "testimonials":[
       {
-        "description":"This is a sample testimonial",
-        "name":"Some technical guy"
+        "description":"Nate was a key member of my team, acting both as my teams agile coah as a highly adept engineer.",
+        "name":"Tom Bast, Optum"
       },
       {
         "description":"I worked with Nate in supporting some critical remediation initiatives at UnitedHealth Group. Nate brought his technical savvy and helped our operations group get efficient around critical reporting needs. He even introduced new automation that reduced the amount of time the teams spent manually working on reports. On top of that, he's a fantastic team mate. He is supportive, collaborative and a pleasure to work with!",

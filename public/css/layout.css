@@ -207,8 +207,8 @@ ul#nav li.current a { color: #F06000; }
 }
 #about .profile-pic {
    position: relative;
-   width: 120px;
-   height: 120px;
+   width: 180x;
+   height: 240px;
    border-radius: 100%;
 }
 #about .contact-details { width: 41.66667%; }
@@ -216,8 +216,7 @@ ul#nav li.current a { color: #F06000; }
    width: 58.33333%;
    padding-top: 6px;
 }
-#about .main-col { padding-right: 5%; }
-#about .download .button {
+p#about .download .button {
    margin-top: 6px;
    background: #444;
 }
@@ -340,20 +339,20 @@ ul#nav li.current a { color: #F06000; }
   	-moz-animation: wordpress 2s ease;
   	-webkit-animation: wordpress 2s ease;
 }
-.css {
+.ansible {
+  	width: 70%;
+  	-moz-animation: Ansible 2s ease;
+  	-webkit-animation: Ansible 2s ease;
+}
+.nodejs {
+  	width: 70%;
+  	-moz-animation: NodeJS 2s ease;
+  	-webkit-animation: NodeJS 2s ease;
+}
+.jenkins {
   	width: 90%;
-  	-moz-animation: css 2s ease;
-  	-webkit-animation: css 2s ease;
-}
-.html5 {
-  	width: 80%;
-  	-moz-animation: html5 2s ease;
-  	-webkit-animation: html5 2s ease;
-}
-.jquery {
-  	width: 50%;
-  	-moz-animation: jquery 2s ease;
-  	-webkit-animation: jquery 2s ease;
+  	-moz-animation: Jenkins 2s ease;
+  	-webkit-animation: Jenkins 2s ease;
 }
 
 @-moz-keyframes photoshop {
@@ -411,7 +410,7 @@ ul#nav li.current a { color: #F06000; }
 /* ------------------------------------------------------------------ */
 
 #portfolio {
-   background: #ebeeee;
+   background: #3b3b38;
    padding-top: 90px;
    padding-bottom: 60px;
 }
@@ -427,7 +426,6 @@ ul#nav li.current a { color: #F06000; }
 /* Portfolio Content */
 #portfolio-wrapper .columns { margin-bottom: 36px; }
 .portfolio-item .item-wrap {
-   background: #fff;
    overflow: hidden;
    position: relative;
 
@@ -463,15 +461,15 @@ ul#nav li.current a { color: #F06000; }
 }
 .portfolio-item .item-wrap .link-icon {
    display: block;
-   color: #fff;
+   color: #000;
    height: 30px;
    width: 30px;
    font-size: 18px;
    line-height: 30px;
    text-align: center;
 
-   opacity: 0;
-	-moz-opacity: 0;
+   opacity: 100;
+	-moz-opacity: 100;
 	filter:alpha(opacity=0);
 
    -webkit-transition: opacity 0.3s ease-in-out;
@@ -639,7 +637,7 @@ call-to-action .button {
 /* ------------------------------------------------------------------ */
 
 #testimonials {
-   background: #1F1F1F url(../images/testimonials-bg.jpg) no-repeat center center;
+   background: #1F1F1F url(../images/header-background.jpg) no-repeat center center;
    background-size: cover !important;
 	-webkit-background-size: cover !important;
    background-attachment: fixed;
