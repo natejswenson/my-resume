@@ -40,13 +40,13 @@ export default  class Resume extends Component {
          </div>
          <Grid columns={4}>
            <Grid.Row>
-            <Grid.Column width={2}>
-            </Grid.Column>
+             <GridColumn width={3}>
+             </GridColumn>
             <GridColumn width={3}>
               <h1><span>Work</span></h1>
             </GridColumn>
-            <GridColumn width={9}>
-              <WorkHistory />
+            <GridColumn  width={9}>
+              <span><WorkHistory /></span>
             </GridColumn>
           </Grid.Row>
         </Grid>
@@ -63,7 +63,7 @@ export default  class Resume extends Component {
                 {
                   this.state.json.skills.map((item) => {
                     return(
-                      <Grid>
+                      <Grid >
                         <Grid.Row columns={2}>
                           <Grid.Column verticalAlign='middle'>
                           <Progress percent={item.number} size='large' color={'grey'}>
