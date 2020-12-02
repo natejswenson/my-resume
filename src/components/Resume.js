@@ -1,28 +1,35 @@
 import React, { Component } from 'react';
+import json from './../resume.json'
+import { Grid, Image, Progress,GridColumn} from 'semantic-ui-react'
+import WorkHistory from './work.js'
 export default  class Resume extends Component {
+  constructor(){
+    super();
+    this.state={json}
+    }
   render() {
     let resumeData = this.props.resumeData;
     return (
       <section id="resume">
-
          <div className="row education">
-
             <div className="three columns header-col">
                <h1><span>Education</span></h1>
             </div>
-
-            <div className="nine columns main-col">
-              {
+            <div className="nine columns main-col">{
                 resumeData.education && resumeData.education.map((item)=>{
                   return(
                     <div className="row item">
                        <div className="twelve columns">
                           <h3>{item.UniversityName}</h3>
                           <p className="info">
-                          {item.specialization}
-                          <span>&bull;</span> <em className="date">{item.MonthOfPassing} {item.YearOfPassing}</em></p>
+                            {item.specialization}
+                            <span>&bull;</span> 
+                            <em className="date">
+                              {item.MonthOfPassing} 
+                              {item.YearOfPassing}
+                            </em></p>
                           <p>
-                          {item.Achievements}
+                            {item.Achievements}
                           </p>
                        </div>
                     </div>
@@ -31,40 +38,18 @@ export default  class Resume extends Component {
               }
             </div>
          </div>
-        <div className="row work">
-            <div className="three columns header-col">
-               <h1><span>Work</span></h1>
-            </div>
-
-            <div className="nine columns main-col">
-              {
-                resumeData.work && resumeData.work.map((item) => {
-                  return(
-                    <div className="row item">
-                       <div className="twelve columns">
-                          <h3>{item.CompanyName}</h3>
-                          <p className="info">
-                          {item.specialization}
-                          <span>&bull;</span><em className="date">{item.MonthOfLeaving} {item.YearOfLeaving}</em>
-                          {/*<span>&bull;</span> <i>{item.toolsused}</i>*/}</p>
-                          <p>
-                            <b>{item.Overview}</b>
-                          <ul>
-                            <li><span>&bull;</span>{item.achievement1}</li>
-                            <li><span>&bull;</span>{item.achievement2}</li>
-                            <li><span>&bull;</span>{item.achievement3}</li>
-                          </ul>
-                          </p>
-                       </div>
-
-                    </div>
-
-                  )
-                })
-              }
-            </div> 
-         </div>
-
+         <Grid columns={4}>
+           <Grid.Row>
+            <Grid.Column width={2}>
+            </Grid.Column>
+            <GridColumn width={3}>
+              <h1><span>Work</span></h1>
+            </GridColumn>
+            <GridColumn width={9}>
+              <WorkHistory />
+            </GridColumn>
+          </Grid.Row>
+        </Grid>
 
          <div className="row skill">
 
@@ -73,34 +58,31 @@ export default  class Resume extends Component {
             </div>
 
             <div className="nine columns main-col">
-
-               <p>
-               {resumeData.skillsDescription}
-               </p>
-
-   				<div className="bars">
-
+   				    <div className="bars">
    				   <ul className="skills">
                 {
-                  resumeData.skills && resumeData.skills.map((item) => {
+                  this.state.json.skills.map((item) => {
                     return(
-                      <li>
-                      <span className={`bar-expand ${item.skillname.toLowerCase()}`}>
-                      </span><em>{item.skillname}</em>
-                      </li>
+                      <Grid>
+                        <Grid.Row columns={2}>
+                          <Grid.Column verticalAlign='middle'>
+                          <Progress percent={item.number} size='large' color={'grey'}>
+                            {item.skillname}
+                          </Progress>
+                          </Grid.Column>
+                          <Grid.Column verticalAlign='top'>
+                            <Image src={item.image} size='tiny'/>
+                          </Grid.Column>
+                        </Grid.Row>
+                      </Grid>
                     )
                   })
                 }
-
    					</ul>
-
    				</div>
-
    			</div>
-
-         </div>
-
-      </section>
+      </div>
+    </section>
     );
   }
 }

@@ -286,7 +286,7 @@ p#about .download .button {
 
 .bars {
 	width: 95%;
-	float: left;
+	float: right;
 	padding: 0;
 	text-align: left;
 }

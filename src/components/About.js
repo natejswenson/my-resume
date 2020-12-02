@@ -20,6 +20,12 @@ export default class About extends Component {
                  resumeData.aboutme
                }
                </p>
+               <h2>Outside of Work</h2>
+               <p>
+               {
+                 resumeData.hobies
+               }
+               </p>
 
                <div className="row">
 
