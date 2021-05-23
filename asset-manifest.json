@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/my-resume/static/css/main.e8c24495.chunk.css",
+    "main.js": "/my-resume/static/js/main.14c7561d.chunk.js",
+    "main.js.map": "/my-resume/static/js/main.14c7561d.chunk.js.map",
+    "runtime~main.js": "/my-resume/static/js/runtime~main.1423441b.js",
+    "runtime~main.js.map": "/my-resume/static/js/runtime~main.1423441b.js.map",
+    "static/css/2.2a67b59c.chunk.css": "/my-resume/static/css/2.2a67b59c.chunk.css",
+    "static/js/2.a1feccee.chunk.js": "/my-resume/static/js/2.a1feccee.chunk.js",
+    "static/js/2.a1feccee.chunk.js.map": "/my-resume/static/js/2.a1feccee.chunk.js.map",
+    "index.html": "/my-resume/index.html",
+    "precache-manifest.6cb5f428cd5a26ac706cbb51365dc9ef.js": "/my-resume/precache-manifest.6cb5f428cd5a26ac706cbb51365dc9ef.js",
+    "service-worker.js": "/my-resume/service-worker.js",
+    "static/css/2.2a67b59c.chunk.css.map": "/my-resume/static/css/2.2a67b59c.chunk.css.map",
+    "static/css/main.e8c24495.chunk.css.map": "/my-resume/static/css/main.e8c24495.chunk.css.map",
+    "static/media/semantic.min.css": "/my-resume/static/media/outline-icons.ef60a4f6.woff"
+  }
+}
