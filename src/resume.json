@@ -31,6 +31,22 @@
       }
     ],
     "work":[
+      {
+        "Company":"Discover Financial Services",
+        "specialization":"Lead Cloud Engineer",
+        "MonthOfLeaving":"",
+        "YearOfLeaving":"Current",
+        "toolsused":"Docker,AnsibleTower, AWS, GitHub",
+        "Overview":"Lead engineer on the cloud foundations team responsible for Ansible Tower",
+        "Achievements":[
+            "Updgraded Ansible Tower from version 3.6 => 3.8",
+            "Onboarded new teams to Ansible tower and helped engineer customized templates and integrations",
+            "Automated application onboarding proccess for assignment of IAM policies to S3 buckets through use of Lambdas, DynamoDB, Jenkins, and ANsible Tower.",
+            "SME for Ansible Tower."
+          
+        ]
+        
+      },
         {
          "Company":"Optum",   
         "specialization":"Lead DevOps Engineer",
@@ -151,6 +167,14 @@
       {
         "description":"I worked with Nate in supporting some critical remediation initiatives at UnitedHealth Group. Nate brought his technical savvy and helped our operations group get efficient around critical reporting needs. He even introduced new automation that reduced the amount of time the teams spent manually working on reports. On top of that, he's a fantastic team mate. He is supportive, collaborative and a pleasure to work with!",
         "name":"Divya Prabhakar, Optum"
+      },
+      {
+        "description":"I had the pleasure to work under Nate as a Software Engineer in the DevOps space. Nate was such a pleasure to work with for any developer out there. Nate gave us complete freedom to try new things, implement new technologies, and show off Proof of Concepts wherever we saw fit. As an engineer, I am always excited to learn about new technologies and Nate gave us the complete freedom to do so. Under Nate, our team was able to implement Ansible and Jenkins, along many other tools to implement Automated Patching and Automated Backups to 500 servers. This was a first for our division, and a big win in terms of automation. Nate was an awesome leader, and really made working so much fun, as well as highly encouraging further learning.",
+        "name":"Veeral Patel, Optum"
+      },
+      {
+        "description":"Nate Swenson is the quintessential team player. He is always among the first to volunteer, and will help support his teammates in whatever way he can. As Nate has emerged into a leader, he's carried that servant leadership approach with him. As a skilled engineer who understands the importance of technical practices such as Test-Driven Development, Continuous Integration, and Continuous Delivery; Nate understands how to build quality in. Couple that with his now extensive experience as an Agile Practitioner, and Nate has developed a coaching skillset to compliment his technical expertise. This makes him a dual threat, and someone who can contribute significantly to whichever teams and organizations he is a part of.",
+        "name":"Robert Wiedner, Optum"
       }
     ]
   }

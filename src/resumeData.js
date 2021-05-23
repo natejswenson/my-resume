@@ -32,10 +32,25 @@ let resumeData = {
     ],
     "work":[
       {
-        "CompanyName":"Optum",
-        "specialization":"Lead DevOps Engineer",
+        "CompanyName":"Discover Financial Services",
+        "specialization":"Lead Cloud Engineer",
         "MonthOfLeaving":"",
         "YearOfLeaving":"Current",
+        "toolsused":"Docker,AnsibleTower, AWS, GitHub",
+        "Overview":"Lead engineer on the cloud foundations team, primarilly focused on Ansible Tower",
+        "Achievements":[
+            "Updgraded Ansible Tower from version 3.6 => 3.8",
+            "Automated application onboarding proccess for assignment of IAM policies to S3 buckets through use of Lambdas, DynamoDB, Jenkins, and ANsible Tower.",
+            "SME for Ansible Tower."
+          
+        ],
+        
+      },
+      {
+        "CompanyName":"Optum",
+        "specialization":"Lead DevOps Engineer",
+        "MonthOfLeaving":"Dec",
+        "YearOfLeaving":"2020",
         "toolsused":"Jenkins, Ansible, Chef, Docker, VMWare, AnsibleTower, Octupus",
         "Overview":"Lead an engineering team focused on DevOps across OptumServe/LHI as well as tool owner for Jenkins Chef and GitHub.",
         "Achievements":[
