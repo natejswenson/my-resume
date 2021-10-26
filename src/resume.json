@@ -4,7 +4,7 @@
     "role": "DevOps Engineer",
     "linkedinId":"natejswenson",
     "skypeid": "",
-    "roleDescription": " I specialize in CICD and Cloud. I am highly skilled in architecting and implementing cloud based architecure. My most recent oppurtunies allowed me to become very familar with GitLab and GitOps",
+    "roleDescription": " I specialize in CICD and Cloud. I am skilled in cloud native design pracatices including microservice arhitecture and and containerized applications . My most recent oppurtunies allowed me to become very familar with GitLab and GitOps",
     "socialLinks":[
         {
           "name":"linkedin",
@@ -106,33 +106,33 @@
     "skills":[
       {
         "skillname":"DevOps",
-        "image":"images/devops.png",
+        "image":"cogs",
         "number":"100",
-        "color":"green"
+        "color":"teal"
       },
       {
         "skillname":"CICD",
-        "image":"images/nodejs.png",
+        "image":"jenkins",
         "number":"90",
-        "color":"green"
+        "color":"teal"
       }, 
       {
         "skillname":"AWS",
-        "image":"images/aws.png",
+        "image":"aws",
         "number":"80",
-        "color":"green"
+        "color":"teal"
       },
       {
         "skillname":"Agile Methodologies",
-        "image":"images/agile.png",
+        "image":"aws",
         "number":"90",
-        "color":"green"
+        "color":"teal"
       },
       {
         "skillname":"Cloud Native",
-        "image":"images/cloudnative.png",
+        "image":"cloud",
         "number":"70",
-        "color":"orange"
+        "color":"teal"
       }
     ],
     "portfolio":[

@@ -20,7 +20,8 @@ class Scrum extends (Component){
               <Header size='large'>{item.Company}</Header>
             </List.Item>
             <List.Item>
-              <Header size='medium' color='grey'>{item.specialization} <em className="date"> <Icon fitted name ='calendar alternate' /> {item.MonthOfLeaving} {item.YearOfLeaving}</em></Header>
+              <Header size='medium' color='grey'>
+                {item.specialization} <em className="date"> <Icon fitted name ='calendar alternate' color='teal' /> {item.MonthOfLeaving} {item.YearOfLeaving}</em></Header>
                 <List.List bulleted>
                   <List.Item ><List.List>
                   <Workcompany a ={item} />
