@@ -72,33 +72,32 @@
         "Company":"Optum",
         "MonthOfLeaving":"Sep",
         "YearOfLeaving":"2019",
-        "specialization":"DevOps Community Lead",
+        "specialization":"DevOps Engineer (Community Leader)",
         "Achievements":[ 
-            "Lead the internal training team for software engineering and DevOps.",
+            "Led the internal training team for software engineering and DevOps.",
             "Developed and delivered hands on training focused on TDD, Pair programming and other XP practices.",
             "Growth and NPS reporting to senior Leadership."
         ]
         },
         {
         "Company":"Optum",
-        "specialization":"Senior DevOps Engineer",
+        "specialization":"DevOps Engineer (Senior)",
         "MonthOfLeaving":"Jan",
         "YearOfLeaving":"2019",
         "Achievements":[ 
-            "Successfully migrated legacy control software for a projects worth upwards of three million USD.",
-            "ILed the development for 27 well sites across western ND.",
-            "Introduced TDD and ATDD as well as other XP programing practices to my development teams, which led to decreased cycle time and fewer defects."  
+            "Created automated testing framework as a jenkins library function which utilized  testcafe, cucumber, selenium and sauce-labs. ",
+            "Active member in the internal engineering community which led me to take on my next role; DevOps community leader"
         ]
         
         },
         {
         "Company":"Novaspect",
-        "specialization":"Lead Developer",
+        "specialization":"Automation Engineer (Lead)",
         "MonthOfLeaving":"Jan",
         "YearOfLeaving":"2016",
         "Achievements":[ 
-            "Successfully migrated legacy control software for a projects worth upwards of three million USD.",
-            "ILed the development for 27 well sites across western ND.",
+            " Migrated legacy control software for a projects worth upwards of three million USD.",
+            "Led development for 27 well sites across western ND.",
             "Introduced TDD and ATDD as well as other XP programing practices to my development teams, which led to decreased cycle time and fewer defects."  
         ]
         }
