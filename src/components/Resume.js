@@ -51,6 +51,7 @@ export default  class Resume extends Component {
               </GridColumn>
             </Grid.Row>
           </Grid>
+          <br/>
         </div>
         <div className="row skill">
           <div className="three columns header-col">
