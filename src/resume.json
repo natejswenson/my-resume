@@ -1,10 +1,10 @@
 {
     "imagebaseurl":"https://natejswenson.github.io/",
     "name": "Nate J. Swenson",
-    "role": "DevOps Engineering Leader",
+    "role": "DevOps Engineer",
     "linkedinId":"natejswenson",
     "skypeid": "",
-    "roleDescription": " I have Implemented Zero downtime / high availability automated deployments using Jenkins; as well as a container based Jenkins architecture. I am highly skilled in architecting and implementing cloud based architecure.",
+    "roleDescription": " I specialize in CICD and Cloud. I am highly skilled in architecting and implementing cloud based architecure. My most recent oppurtunies allowed me to become very familar with GitLab and GitOps",
     "socialLinks":[
         {
           "name":"linkedin",
@@ -17,9 +17,9 @@
           "className":"fa fa-github"
         }
       ],
-    "aboutme":"I am a servant leader with 12 years of experience and in Software Engineering, DevOps, and digital transformation. I am currently leading a distributed DevOps team focused on maturing deployment practices and implementing a contanerized cloud stategy utizing Kubernetes.",
-    "hobies":"In my free time I enjoy being active, hainging out with my family and learning new techy stuff. I recently read living with a seal and Can't Hurt Me both which have really made me try to become more mentally strong, especially when it comes to physical challenges; for me that is running. I am married and have two girls that I try to spend as much time with as I can. My daughters are the reason I have gotten so involved with STEM programs, and helping with Lego League Robotics. I Also enjoy learning new things by doing cool projects like writing alexa skills, automating my house and helping friends create websites for their bussinesses.",
-    "email":"swen407@gmail.com",
+    "aboutme":"I am a hands on technical leader specializing in DevOps and Cloud. Currently I working at Fannie Mae on the Cloud Native Team helping the Company Migrate from Bitbucket and Jenkins to Gitlab. #GitOps",
+    "hobies":"In my free time I enjoy being active, hainging out with my family and learning new techy stuff. I am married and have two girls that I try to spend as much time with as I can. My daughters are the reason I have gotten so involved with STEM programs, and helping with Lego League Robotics. I also enjoy learning new things by doing cool projects like writing alexa skills, automating my house and helping friends create websites for their bussinesses.",
+    "email":"natejswenson@gmail.com",
     "address":"Minnesota, USA",
     "website":"https://natejswenson.github.io",
     "education":[
