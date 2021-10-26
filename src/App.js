@@ -6,13 +6,14 @@ import Portfolio from './components/Portfolio';
 import Testimonials from  './components/Testimonials';
 import ContactUs from './components/ContactUs';
 import Footer from './components/Footer';
-import resumeData from './resumeData';
+import resumeData from './resume.json';
+import json from './resume.json';
 class App extends Component {
   render() {
     return (
       <div className="App">
         <Header resumeData={resumeData}/>
-        <About resumeData={resumeData}/>
+        <About resumeData={json}/>
         <Resume resumeData={resumeData}/>
         <Portfolio resumeData={resumeData}/>
         <Testimonials resumeData={resumeData}/>
