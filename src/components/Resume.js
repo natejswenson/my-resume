@@ -50,17 +50,13 @@ export default  class Resume extends Component {
             </GridColumn>
           </Grid.Row>
         </Grid>
-        <Grid columns={4}>
-           <Grid.Row>
-             <GridColumn width={3}>
-             </GridColumn>
-            <GridColumn width={3}>
-              <h1><span>Skills</span></h1>
-            </GridColumn>
-            <GridColumn  width={9}>
-              <div className="nine columns main-col">
-                <div className="bars">
-                <ul className="skills">
+        <div className="row skill">
+          <div className="three columns header-col">
+             <h1><span>Skills</span></h1>
+          </div>
+          <div className="nine columns main-col">
+            <div className="bars">
+              <ul className="skills">
                   {
                     this.state.json.skills.map((item) => {
                       return(
@@ -79,12 +75,10 @@ export default  class Resume extends Component {
                       )
                     })
                   }
-                </ul>
-                </div>
-              </div>
-            </GridColumn>
-          </Grid.Row>
-        </Grid>
+              </ul>
+            </div>
+          </div>
+        </div>
     </section>
     );
   }
