@@ -50,38 +50,41 @@ export default  class Resume extends Component {
             </GridColumn>
           </Grid.Row>
         </Grid>
-
-         <div className="row skill">
-
-            <div className="three columns header-col">
-               <h1><span>Skills</span></h1>
-            </div>
-
-            <div className="nine columns main-col">
-   				    <div className="bars">
-   				   <ul className="skills">
-                {
-                  this.state.json.skills.map((item) => {
-                    return(
-                      <Grid >
-                        <Grid.Row columns={2}>
-                          <Grid.Column verticalAlign='middle'>
-                          <Progress percent={item.number} size='large' color={'grey'}>
-                            {item.skillname}
-                          </Progress>
-                          </Grid.Column>
-                          <Grid.Column verticalAlign='top'>
-                            <Image src={item.image} size='tiny'/>
-                          </Grid.Column>
-                        </Grid.Row>
-                      </Grid>
-                    )
-                  })
-                }
-   					</ul>
-   				</div>
-   			</div>
-      </div>
+        <Grid columns={4}>
+           <Grid.Row>
+             <GridColumn width={3}>
+             </GridColumn>
+            <GridColumn width={3}>
+              <h1><span>Skills</span></h1>
+            </GridColumn>
+            <GridColumn  width={9}>
+              <div className="nine columns main-col">
+                <div className="bars">
+                <ul className="skills">
+                  {
+                    this.state.json.skills.map((item) => {
+                      return(
+                        <Grid >
+                          <Grid.Row columns={2}>
+                            <Grid.Column verticalAlign='middle'>
+                            <Progress percent={item.number} size='large' color={'grey'}>
+                              {item.skillname}
+                            </Progress>
+                            </Grid.Column>
+                            <Grid.Column verticalAlign='top'>
+                              <Image src={item.image} size='tiny'/>
+                            </Grid.Column>
+                          </Grid.Row>
+                        </Grid>
+                      )
+                    })
+                  }
+                </ul>
+                </div>
+              </div>
+            </GridColumn>
+          </Grid.Row>
+        </Grid>
     </section>
     );
   }
