@@ -32,32 +32,39 @@
     ],
     "work":[
       {
-        "Company":"Discover Financial Services",
-        "specialization":"Lead Cloud Engineer",
+        "Company":"Fannie Mae",
+        "specialization":"DevOps Engineer (Lead Associate)",
         "MonthOfLeaving":"",
         "YearOfLeaving":"Current",
-        "toolsused":"Docker,AnsibleTower, AWS, GitHub",
-        "Overview":"Lead engineer on the cloud foundations team responsible for Ansible Tower",
         "Achievements":[
-            "Updgraded Ansible Tower from version 3.6 => 3.8",
-            "Onboarded new teams to Ansible tower and helped engineer customized templates and integrations",
-            "Automated application onboarding proccess for assignment of IAM policies to S3 buckets through use of Lambdas, DynamoDB, Jenkins, and ANsible Tower.",
-            "SME for Ansible Tower."
-          
+            "Architected an on-prem greenfield installation of GitLab on AWS",
+            "Setup aws acount specific runner EKS runners team provision using Cloud Formation template when they are onboarded to the platform",
+            "Partnered with information security team to design and imlement a compliance framework in GitLab which contained the existing 96 non functional requirments and is added to every team and project which onboards to the platform "
+    
+        ]
+        
+      },
+      {
+        "Company":"Discover Financial Services",
+        "specialization":"Cloud Engineer (Lead)",
+        "MonthOfLeaving":"May",
+        "YearOfLeaving":"2021",
+        "Achievements":[
+            "Updgraded Ansible Tower from version 3.6 => 3.8 and moved host infrastructure to EKS",
+            "Created temporary access layer in AWS using lambda functions to grant users credentials to higher restricted environments with ServiceNow integration"
+    
         ]
         
       },
         {
          "Company":"Optum",   
-        "specialization":"Lead DevOps Engineer",
-        "MonthOfLeaving":"",
-        "YearOfLeaving":"Current",
-        "toolsused":"Jenkins, Ansible, Chef, Docker, VMWare, AnsibleTower, Octupus",
-        "Overview":"Lead an engineering team focused on DevOps across OptumServe/LHI as well as tool owner for Jenkins Chef and GitHub.",
+        "specialization":"DevOps Engineer (Lead)",
+        "MonthOfLeaving":"Dec",
+        "YearOfLeaving":"2020",
         "Achievements":[
-            "Implemented a Zero downtime / high Blue – Green deployment strategy that utilized Jenkins and Octupus",
-            "Moved from Manual Patching to Automated Patching using Ansile tower and SolarWinds",
-            "Implemented Container Based Jenkins Infrastructure which provided much more scalability and recoverability."
+            "Implemented geographic redundancy and automatic failovers in AWS for front end services which resulting in application availability to increase from 96.7% to 99.1%",
+            "Automated patching of physical, on-prem servers using Ansile tower and SolarWinds which saved 425 hours monthly",
+            "Upgraded Jenkins Infrastructure to utilize containers hosted on openshift"
         
             ]
         },
@@ -66,8 +73,6 @@
         "MonthOfLeaving":"Sep",
         "YearOfLeaving":"2019",
         "specialization":"DevOps Community Lead",
-        "toolsused":"Jenkins, Ansible, Chef, Docker, VMWare, AnsibleTower, Octupus",
-        "Overview":"Lead a distributed team working on creating stronger internal Agile and Engineering communities of practice that spans an organization that is 235K people.",
         "Achievements":[ 
             "Lead the internal training team for software engineering and DevOps.",
             "Developed and delivered hands on training focused on TDD, Pair programming and other XP practices.",
@@ -79,8 +84,6 @@
         "specialization":"Senior DevOps Engineer",
         "MonthOfLeaving":"Jan",
         "YearOfLeaving":"2019",
-        "toolsused":"Jenkins, Ansible, Chef, Docker, VMWare, AnsibleTower, Octupus",
-        "Overview":"Acted as both an individual contrubitor and techical coach focused on CI/CD and Automated Testing",
         "Achievements":[ 
             "Successfully migrated legacy control software for a projects worth upwards of three million USD.",
             "ILed the development for 27 well sites across western ND.",
@@ -93,8 +96,6 @@
         "specialization":"Lead Developer",
         "MonthOfLeaving":"Jan",
         "YearOfLeaving":"2016",
-        "toolsused":"Jenkins, Ansible, Chef, Docker, VMWare, AnsibleTower, Octupus",
-        "Overview":"Lead engineer for wellhead and other oil and gas projects for customers in the Western ND and Montana",
         "Achievements":[ 
             "Successfully migrated legacy control software for a projects worth upwards of three million USD.",
             "ILed the development for 27 well sites across western ND.",
@@ -105,32 +106,32 @@
     "skillsDescription":"Your skills here",
     "skills":[
       {
-        "skillname":"Docker",
-        "image":"images/docker.png",
-        "number":"70",
-        "color":"orange"
+        "skillname":"DevOps",
+        "image":"images/devops.png",
+        "number":"100",
+        "color":"green"
       },
       {
-        "skillname":"NodeJS",
+        "skillname":"CICD",
         "image":"images/nodejs.png",
-        "number":"80",
+        "number":"90",
         "color":"green"
       }, 
       {
-        "skillname":"Ansible",
-        "image":"images/ansible.png",
-        "number":"80",
-        "color":"green"
-      },
-      {
-        "skillname":"Jenkins",
-        "image":"images/jenkins.png",
-        "number":"80",
-        "color":"green"
-      },
-      {
         "skillname":"AWS",
         "image":"images/aws.png",
+        "number":"80",
+        "color":"green"
+      },
+      {
+        "skillname":"Agile Methodologies",
+        "image":"images/agile.png",
+        "number":"90",
+        "color":"green"
+      },
+      {
+        "skillname":"Cloud Native",
+        "image":"images/cloudnative.png",
         "number":"70",
         "color":"orange"
       }
