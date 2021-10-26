@@ -39,17 +39,15 @@ export default  class Resume extends Component {
             </div>
          </div>
          <div>
-          <Grid columns={4}>
+          <Grid columns={3}>
             <Grid.Row>
               <GridColumn width={3}>
               </GridColumn>
               <GridColumn width={3}>
                 <h1><span>Work</span></h1>
               </GridColumn>
-              <GridColumn  width={9}>
+              <GridColumn  width={10}>
                 <span><WorkHistory /></span>
-              </GridColumn>
-              <GridColumn width={3}>
               </GridColumn>
             </Grid.Row>
           </Grid>
