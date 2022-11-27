@@ -17,8 +17,8 @@
           "className":"fa fa-github"
         }
       ],
-    "aboutme":"I am a hands on technical leader specializing in DevOps and Cloud. Currently I working at Fannie Mae on the Cloud Native Team helping the Company Migrate from Bitbucket and Jenkins to Gitlab. #GitOps",
-    "hobies":"In my free time I enjoy being active, hainging out with my family and learning new techy stuff. I am married and have two girls that I try to spend as much time with as I can. My daughters are the reason I have gotten so involved with STEM programs, and helping with Lego League Robotics. I also enjoy learning new things by doing cool projects like writing alexa skills, automating my house and helping friends create websites for their bussinesses.",
+    "aboutme":"Nate Swenson is a hands-on DevOps engineer with 12 years of experience within Fortune 100 companies in the insurance and finance sectors. Nate considers himself a DevOps generalist, although the majority of his work revolves around cloud infrastructure and Continuous Integration (CI) and Continuous Delivery (CD).\nNate is a Senior DevOps engineer at GoodLeapfor where he specializes in cloud infrastructure, coaching, and CI/CD process improvements.",
+    "hobies":"Outside of work, Nate can be found hanging out with his wife and two daughters, exploring the outdoors, or tinkering with his custom home automation setup.",
     "email":"natejswenson@gmail.com",
     "address":"Minnesota, USA",
     "website":"https://natejswenson.github.io",
@@ -32,10 +32,19 @@
     ],
     "work":[
       {
-        "Company":"Fannie Mae",
-        "specialization":"DevOps Engineer (Lead Associate)",
+        "Company":"GoodLeap",
+        "specialization":"Senior DevOps Engineer",
         "MonthOfLeaving":"",
         "YearOfLeaving":"Current",
+        "Achievements":[
+        ]
+        
+      },
+      {
+        "Company":"Fannie Mae",
+        "specialization":"DevOps Engineer (Lead Associate)",
+        "MonthOfLeaving":"October",
+        "YearOfLeaving":"2022",
         "Achievements":[
             "Architected an on-prem greenfield installation of GitLab on AWS",
             "Setup aws acount specific runner EKS runners team provision using Cloud Formation template when they are onboarded to the platform",
@@ -137,6 +146,12 @@
     ],
     "portfolio":[
       {
+        "name":"DevOps Career Handbook",
+        "description": "Ultimate guide to pursuing a succesful career in DevOps",
+        "imgurl":"images/book.jpg",
+        "url":"https://www.amazon.com/gp/product/B09Z6R6FD7/ref=dbs_a_def_rwt_bibl_vppi_i0"
+      },
+      {
         "name":"Annoy My Mom",
         "description": "Top rated Alexa skill built using NodeJs.",
         "imgurl":"images/Annoymymom.png",
@@ -155,7 +170,7 @@
       },
       {
         "name":"Git Hub",
-        "description":"Check it out; my goal for 2021 is to be active every day!",  
+        "description":"nothing worth seeing",  
         "imgurl":"images/github.png"
       }
     ],
