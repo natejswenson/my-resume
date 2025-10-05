@@ -123,27 +123,32 @@
       {
         "name":"AI / LLM",
         "category":"core",
-        "icon":"brain"
+        "icon":"brain",
+        "description":"Artificial Intelligence & Large Language Models"
       },
       {
         "name":"DevOps",
         "category":"core",
-        "icon":"cogs"
+        "icon":"cogs",
+        "description":"Development & Operations Integration"
       },
       {
         "name":"Cloud",
         "category":"core",
-        "icon":"cloud"
+        "icon":"cloud",
+        "description":"Cloud Infrastructure & Services"
       },
       {
         "name":"Automation",
         "category":"core",
-        "icon":"robot"
+        "icon":"robot",
+        "description":"Process & Infrastructure Automation"
       },
       {
         "name":"CI/CD",
         "category":"core",
-        "icon":"infinity"
+        "icon":"infinity",
+        "description":"Continuous Integration & Deployment"
       }
     ],
     "tools":[
