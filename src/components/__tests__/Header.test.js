@@ -47,11 +47,33 @@ describe('Header Component', () => {
     expect(screen.getByText('Home')).toBeInTheDocument();
     expect(screen.getByText('About')).toBeInTheDocument();
     expect(screen.getByText('Resume')).toBeInTheDocument();
-    expect(screen.getByText('Skills')).toBeInTheDocument();
     expect(screen.getByText('Tools')).toBeInTheDocument();
     expect(screen.getByText('Works')).toBeInTheDocument();
     expect(screen.getByText('Testimonials')).toBeInTheDocument();
     expect(screen.getByText('Contact')).toBeInTheDocument();
+  });
+
+  it('does not include Skills link in navigation', () => {
+    render(<Header resumeData={mockResumeData} />);
+    const navLinks = document.querySelectorAll('#nav a');
+    const skillsLink = Array.from(navLinks).find(link => link.textContent === 'Skills');
+    expect(skillsLink).toBeUndefined();
+  });
+
+  it('navigation order is correct without Skills', () => {
+    render(<Header resumeData={mockResumeData} />);
+    const navLinks = document.querySelectorAll('#nav li a');
+    const linkTexts = Array.from(navLinks).map(link => link.textContent);
+
+    expect(linkTexts).toEqual([
+      'Home',
+      'About',
+      'Resume',
+      'Tools',
+      'Works',
+      'Testimonials',
+      'Contact'
+    ]);
   });
 
   it('renders scroll down indicator', () => {

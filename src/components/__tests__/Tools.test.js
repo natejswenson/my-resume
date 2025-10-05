@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react';
 import Tools from '../Tools';
 import { mockResumeData } from '../../test-utils/mock-data';
 
-describe('Tools Component', () => {
+describe('Tools Component - Card-Based Redesign', () => {
   it('renders without crashing', () => {
     render(<Tools resumeData={mockResumeData} />);
   });
@@ -13,50 +13,37 @@ describe('Tools Component', () => {
     expect(screen.getByText(/Tools & Technologies/i)).toBeInTheDocument();
   });
 
-  it('displays all tool categories', () => {
+  it('displays tool cards with icons and labels', () => {
     render(<Tools resumeData={mockResumeData} />);
-    expect(screen.getByText('Infrastructure as Code')).toBeInTheDocument();
-    expect(screen.getByText('AWS Services')).toBeInTheDocument();
-    expect(screen.getByText('DevOps & Monitoring')).toBeInTheDocument();
+    const toolCards = document.querySelectorAll('.tool-card');
+    expect(toolCards.length).toBeGreaterThan(0);
   });
 
-  it('renders Infrastructure as Code tools (Terraform, OpenTofu)', () => {
+  it('renders with illustrative icon containers', () => {
+    render(<Tools resumeData={mockResumeData} />);
+    const iconContainers = document.querySelectorAll('.icon-container');
+    expect(iconContainers.length).toBeGreaterThan(0);
+  });
+
+  it('displays icons for each tool', () => {
+    render(<Tools resumeData={mockResumeData} />);
+    const toolIcons = document.querySelectorAll('.tool-icon');
+    expect(toolIcons.length).toBeGreaterThan(0);
+  });
+
+  it('tool cards are in a responsive grid layout', () => {
+    render(<Tools resumeData={mockResumeData} />);
+    const toolsGrid = document.querySelector('.tools-grid');
+    expect(toolsGrid).toBeInTheDocument();
+  });
+
+  it('renders common tools (Terraform, AWS, ECS, S3, Lambda)', () => {
     render(<Tools resumeData={mockResumeData} />);
     expect(screen.getByText('Terraform')).toBeInTheDocument();
-    expect(screen.getByText('OpenTofu')).toBeInTheDocument();
-  });
-
-  it('renders all 7 AWS services', () => {
-    render(<Tools resumeData={mockResumeData} />);
+    expect(screen.getByText('AWS')).toBeInTheDocument();
     expect(screen.getByText('ECS')).toBeInTheDocument();
     expect(screen.getByText('S3')).toBeInTheDocument();
-    expect(screen.getByText('CloudFormation')).toBeInTheDocument();
     expect(screen.getByText('Lambda')).toBeInTheDocument();
-    expect(screen.getByText('API Gateway')).toBeInTheDocument();
-    expect(screen.getByText('Route 53')).toBeInTheDocument();
-    expect(screen.getByText('CloudWatch')).toBeInTheDocument();
-  });
-
-  it('renders DevOps tools (DataDog, Scalr, GitHub Actions, Seed, SSTv2)', () => {
-    render(<Tools resumeData={mockResumeData} />);
-    expect(screen.getByText('DataDog')).toBeInTheDocument();
-    expect(screen.getByText('Scalr')).toBeInTheDocument();
-    expect(screen.getByText('GitHub Actions')).toBeInTheDocument();
-    expect(screen.getByText('Seed')).toBeInTheDocument();
-    expect(screen.getByText('SSTv2')).toBeInTheDocument();
-  });
-
-  it('tools are displayed as pill-style tags', () => {
-    render(<Tools resumeData={mockResumeData} />);
-    const toolPills = document.querySelectorAll('.tool-pill');
-    // 2 IaC + 7 AWS + 5 DevOps = 14 tools
-    expect(toolPills.length).toBeGreaterThanOrEqual(14);
-  });
-
-  it('tools are grouped under category headings', () => {
-    render(<Tools resumeData={mockResumeData} />);
-    const categoryHeadings = document.querySelectorAll('.category-heading');
-    expect(categoryHeadings.length).toBe(3);
   });
 
   it('renders within #tools section', () => {
@@ -65,35 +52,71 @@ describe('Tools Component', () => {
     expect(section).toBeInTheDocument();
   });
 
-  it('each tool pill is accessible', () => {
+  it('tool cards are keyboard accessible', () => {
     render(<Tools resumeData={mockResumeData} />);
-    const toolPills = document.querySelectorAll('.tool-pill');
+    const toolCards = document.querySelectorAll('.tool-card');
 
-    toolPills.forEach(pill => {
-      expect(pill).toHaveAttribute('role', 'button');
-      expect(pill).toHaveAttribute('tabIndex', '0');
+    toolCards.forEach(card => {
+      expect(card).toHaveAttribute('tabIndex', '0');
     });
   });
 
-  it('matches styling of Skills section', () => {
+  it('section heading is prominent and centered', () => {
     render(<Tools resumeData={mockResumeData} />);
-    const toolPill = document.querySelector('.tool-pill');
-    expect(toolPill).toBeInTheDocument();
-    expect(toolPill.className).toContain('tool-pill');
+    const heading = screen.getByText(/Tools & Technologies/i);
+    expect(heading).toBeInTheDocument();
+    expect(heading.className).toContain('section-heading');
+  });
+
+  it('displays tool descriptions when provided', () => {
+    render(<Tools resumeData={mockResumeData} />);
+    const descriptions = document.querySelectorAll('.tool-description');
+    expect(descriptions.length).toBeGreaterThan(0);
+  });
+
+  it('icons have proper accessibility attributes', () => {
+    render(<Tools resumeData={mockResumeData} />);
+    const icons = document.querySelectorAll('.tool-icon');
+    icons.forEach(icon => {
+      expect(icon).toHaveAttribute('alt');
+    });
+  });
+
+  it('applies tool-card class for styling', () => {
+    render(<Tools resumeData={mockResumeData} />);
+    const firstCard = document.querySelector('.tool-card');
+    expect(firstCard).toBeInTheDocument();
+    expect(firstCard.className).toContain('tool-card');
+  });
+
+  it('renders React Icons correctly', () => {
+    render(<Tools resumeData={mockResumeData} />);
+    const toolIcons = document.querySelectorAll('.tool-icon');
+    expect(toolIcons.length).toBeGreaterThan(0);
+  });
+
+  it('handles missing icon gracefully', () => {
+    const dataWithoutIcon = {
+      tools: [
+        { name: 'No Icon Tool', category: 'Test', description: 'Test' }
+      ]
+    };
+    render(<Tools resumeData={dataWithoutIcon} />);
+    expect(screen.getByText('No Icon Tool')).toBeInTheDocument();
   });
 
   it('tools data comes from resumeData prop', () => {
     const customData = {
       tools: [
         {
+          name: 'Test Tool',
           category: 'Test Category',
-          items: ['Test Tool 1', 'Test Tool 2']
+          icon: 'terraform',
+          description: 'Test description'
         }
       ]
     };
     render(<Tools resumeData={customData} />);
-    expect(screen.getByText('Test Category')).toBeInTheDocument();
-    expect(screen.getByText('Test Tool 1')).toBeInTheDocument();
-    expect(screen.getByText('Test Tool 2')).toBeInTheDocument();
+    expect(screen.getByText('Test Tool')).toBeInTheDocument();
   });
 });

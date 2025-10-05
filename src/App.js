@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Header from './components/Header';
 import About from './components/About';
 import Resume from './components/Resume';
-import Skills from './components/skills';
 import Tools from './components/Tools';
 import Portfolio from './components/Portfolio';
 import Testimonials from  './components/Testimonials';
@@ -17,7 +16,6 @@ class App extends Component {
         <Header resumeData={resumeData}/>
         <About resumeData={json}/>
         <Resume resumeData={resumeData}/>
-        <Skills resumeData={resumeData}/>
         <Tools resumeData={resumeData}/>
         <Portfolio resumeData={resumeData}/>
         <Testimonials resumeData={resumeData}/>
