@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import json from './../resume.json'
-import { Grid, Image, Progress,GridColumn} from 'semantic-ui-react'
+import { Grid, GridColumn} from 'semantic-ui-react'
 import WorkHistory from './work.js'
 import Education from './Education.js'
 import Skills from './skills.js'
@@ -10,7 +10,6 @@ export default  class Resume extends Component {
     this.state={json}
     }
   render() {
-    let resumeData = this.props.resumeData;
     return (
       <section id="resume">
          <Grid columns={3}>

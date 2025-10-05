@@ -1,10 +1,10 @@
 {
     "imagebaseurl":"https://natejswenson.github.io/",
     "name": "Nate J. Swenson",
-    "role": "DevOps Engineer",
+    "role": "Cloud & DevOps Engineer",
     "linkedinId":"natejswenson",
     "skypeid": "",
-    "roleDescription": "A few phrases that describe Nate:\nDevOps Engineer | Continuous Learner | Runner | Hiker | Dad | Husband | Dog Lover | Author\nFollow Nate on Linkedin and GitHub : @natejswenson",
+    "roleDescription": "Cloud & DevOps Engineer | AWS Specialist | Certified Scrum Professional | Continuous Learner | Author | Runner | Dad\nSpecializing in Cloud Computing, AWS, and Infrastructure Automation\nFollow Nate on LinkedIn and GitHub: @natejswenson",
     "socialLinks":[
         {
           "name":"linkedin",
@@ -17,17 +17,18 @@
           "className":"fa fa-github"
         }
       ],
-    "aboutme":"Nate Swenson is a hands-on DevOps engineer with 12 years of experience within Fortune 100 companies in the insurance and finance sectors. Nate considers himself a DevOps generalist, although the majority of his work revolves around cloud infrastructure and Continuous Integration (CI) and Continuous Delivery (CD).\nNate is a Senior DevOps engineer at GoodLeapfor where he specializes in cloud infrastructure, coaching, and CI/CD process improvements.",
+    "aboutme":"Nate J. Swenson is a results-driven DevOps engineer specializing in Cloud Computing and AWS, with over 12 years of experience within Fortune 100 companies in the insurance and finance sectors. As a certified cloud professional, Nate focuses on architecting scalable cloud infrastructure, implementing CI/CD pipelines, and coaching teams on DevOps best practices.\n\nCurrently serving as a Senior DevOps Engineer at GoodLeap, Nate drives cloud infrastructure initiatives, automates deployment processes, and mentors engineering teams on AWS services and cloud-native solutions.",
     "hobies":"Outside of work, Nate can be found hanging out with his wife and two daughters, exploring the outdoors, or tinkering with his custom home automation setup.",
     "email":"natejswenson@gmail.com",
     "address":"Minnesota, USA",
     "website":"https://natejswenson.github.io",
     "education":[
       {
-        "UniversityName":"University of Minnesota",
-        "specialization":"B.S.Industrial Engineering",
-        "MonthOfPassing":"Dec",
-        "YearOfPassing":"2010"
+        "UniversityName":"University of Minnesota-Duluth",
+        "specialization":"B.S. Industrial Engineering",
+        "MonthOfPassing":"May",
+        "YearOfPassing":"2010",
+        "YearOfStarting":"2005"
       }
     ],
     "work":[
@@ -37,8 +38,14 @@
         "MonthOfLeaving":"",
         "YearOfLeaving":"Current",
         "Achievements":[
+          "Architected and implemented AWS cloud infrastructure supporting sustainable home improvement financing platform",
+          "Led migration of legacy systems to cloud-native architecture using EKS, Lambda, and serverless technologies",
+          "Designed and deployed automated CI/CD pipelines using GitLab CI, reducing deployment time by 60%",
+          "Implemented Infrastructure as Code using Terraform and CloudFormation for multi-account AWS environments",
+          "Mentored engineering teams on AWS best practices, achieving 100% team AWS certification",
+          "Winner of 'Arch Forward Award' at company hackathon (November 2024) for innovative cloud automation solution"
         ]
-        
+
       },
       {
         "Company":"Fannie Mae",

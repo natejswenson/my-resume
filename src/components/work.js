@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Grid, Header, GridColumn, GridRow} from 'semantic-ui-react';
+import {Grid, Header} from 'semantic-ui-react';
 import json from '../resume.json';
 import Workcompany from './work.achievements.js';
 import {List, Icon}from 'semantic-ui-react'

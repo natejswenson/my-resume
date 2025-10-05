@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Grid,Progress,Divider, Icon} from 'semantic-ui-react';
+import {Grid,Progress,Divider} from 'semantic-ui-react';
 import json from '../resume.json';
 
 
