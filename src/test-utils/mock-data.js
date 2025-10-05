@@ -61,22 +61,43 @@ export const mockResumeData = {
   skillsDescription: "Test skills description",
   skills: [
     {
-      skillname: "JavaScript",
-      image: "javascript",
-      number: "90",
-      color: "teal"
+      name: "AI / LLM",
+      category: "core",
+      icon: "brain"
     },
     {
-      skillname: "React",
-      image: "react",
-      number: "85",
-      color: "teal"
+      name: "DevOps",
+      category: "core",
+      icon: "cogs"
     },
     {
-      skillname: "Node.js",
-      image: "nodejs",
-      number: "80",
-      color: "teal"
+      name: "Cloud",
+      category: "core",
+      icon: "cloud"
+    },
+    {
+      name: "Automation",
+      category: "core",
+      icon: "robot"
+    },
+    {
+      name: "CI/CD",
+      category: "core",
+      icon: "infinity"
+    }
+  ],
+  tools: [
+    {
+      category: "Infrastructure as Code",
+      items: ["Terraform", "OpenTofu"]
+    },
+    {
+      category: "AWS Services",
+      items: ["ECS", "S3", "CloudFormation", "Lambda", "API Gateway", "Route 53", "CloudWatch"]
+    },
+    {
+      category: "DevOps & Monitoring",
+      items: ["DataDog", "Scalr", "GitHub Actions", "Seed", "SSTv2"]
     }
   ],
   portfolio: [
