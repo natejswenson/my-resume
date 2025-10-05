@@ -47,6 +47,8 @@ describe('Header Component', () => {
     expect(screen.getByText('Home')).toBeInTheDocument();
     expect(screen.getByText('About')).toBeInTheDocument();
     expect(screen.getByText('Resume')).toBeInTheDocument();
+    expect(screen.getByText('Skills')).toBeInTheDocument();
+    expect(screen.getByText('Tools')).toBeInTheDocument();
     expect(screen.getByText('Works')).toBeInTheDocument();
     expect(screen.getByText('Testimonials')).toBeInTheDocument();
     expect(screen.getByText('Contact')).toBeInTheDocument();
@@ -57,5 +59,42 @@ describe('Header Component', () => {
     const scrollLink = document.querySelector('.scrolldown a');
     expect(scrollLink).toBeInTheDocument();
     expect(scrollLink).toHaveAttribute('href', '#about');
+  });
+
+  describe('Tools Navigation Link', () => {
+    it('includes Tools link in navigation', () => {
+      render(<Header resumeData={mockResumeData} />);
+      const toolsLink = screen.getByText('Tools');
+      expect(toolsLink).toBeInTheDocument();
+    });
+
+    it('Tools link has correct href', () => {
+      render(<Header resumeData={mockResumeData} />);
+      const toolsLink = screen.getByText('Tools');
+      expect(toolsLink.closest('a')).toHaveAttribute('href', '#tools');
+    });
+
+    it('Tools link has smoothscroll class', () => {
+      render(<Header resumeData={mockResumeData} />);
+      const toolsLink = screen.getByText('Tools');
+      expect(toolsLink.closest('a')).toHaveClass('smoothscroll');
+    });
+
+    it('navigation order is correct', () => {
+      render(<Header resumeData={mockResumeData} />);
+      const navLinks = Array.from(document.querySelectorAll('#nav a'));
+      const linkTexts = navLinks.map(link => link.textContent);
+
+      expect(linkTexts).toEqual([
+        'Home',
+        'About',
+        'Resume',
+        'Skills',
+        'Tools',
+        'Works',
+        'Testimonials',
+        'Contact'
+      ]);
+    });
   });
 });

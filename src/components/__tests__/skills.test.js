@@ -1,41 +1,63 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import Skills from '../skills';
+import { mockResumeData } from '../../test-utils/mock-data';
 
-// Skills component uses resume.json directly
-describe('Skills Component', () => {
+describe('Skills Component Redesign', () => {
   it('renders without crashing', () => {
-    render(<Skills />);
+    render(<Skills resumeData={mockResumeData} />);
   });
 
-  it('displays skills with progress bars', () => {
-    render(<Skills />);
-    const progressBars = document.querySelectorAll('.ui.progress');
-    expect(progressBars.length).toBeGreaterThan(0);
+  it('renders all 5 skill categories', () => {
+    render(<Skills resumeData={mockResumeData} />);
+    expect(screen.getByText('AI / LLM')).toBeInTheDocument();
+    expect(screen.getByText('DevOps')).toBeInTheDocument();
+    expect(screen.getByText('Cloud')).toBeInTheDocument();
+    expect(screen.getByText('Automation')).toBeInTheDocument();
+    expect(screen.getByText('CI/CD')).toBeInTheDocument();
   });
 
-  it('renders skill names', () => {
-    render(<Skills />);
-    // Check for some skills from resume.json
-    expect(screen.getByText(/DevOps/i) || screen.getByText(/CICD/i)).toBeInTheDocument();
+  it('displays skills as pill-style tags', () => {
+    render(<Skills resumeData={mockResumeData} />);
+    const skillPills = document.querySelectorAll('.skill-pill');
+    expect(skillPills.length).toBe(5);
   });
 
-  it('applies correct color themes', () => {
-    render(<Skills />);
-    const progressBars = document.querySelectorAll('.ui.progress');
+  it('each skill pill is accessible', () => {
+    render(<Skills resumeData={mockResumeData} />);
+    const skillPills = document.querySelectorAll('.skill-pill');
 
-    // Check that progress bars have color classes
-    progressBars.forEach(bar => {
-      expect(bar.className).toMatch(/teal|green|orange|blue/);
+    skillPills.forEach(pill => {
+      expect(pill).toHaveAttribute('role', 'button');
+      expect(pill).toHaveAttribute('tabIndex', '0');
     });
   });
 
-  it('displays percentage values', () => {
-    render(<Skills />);
-    const progressBars = document.querySelectorAll('.ui.progress');
+  it('skills section has proper heading', () => {
+    render(<Skills resumeData={mockResumeData} />);
+    expect(screen.getByText(/Core Skills/i)).toBeInTheDocument();
+  });
 
-    progressBars.forEach(bar => {
-      expect(bar).toHaveAttribute('data-percent');
-    });
+  it('renders within #skills section', () => {
+    render(<Skills resumeData={mockResumeData} />);
+    const section = document.querySelector('#skills');
+    expect(section).toBeInTheDocument();
+  });
+
+  it('skills data comes from resumeData prop', () => {
+    const customData = {
+      skills: [
+        { name: 'Test Skill', category: 'core', icon: 'test' }
+      ]
+    };
+    render(<Skills resumeData={customData} />);
+    expect(screen.getByText('Test Skill')).toBeInTheDocument();
+  });
+
+  it('applies skill-pill class for styling', () => {
+    render(<Skills resumeData={mockResumeData} />);
+    const firstPill = document.querySelector('.skill-pill');
+    expect(firstPill).toBeInTheDocument();
+    expect(firstPill.className).toContain('skill-pill');
   });
 });

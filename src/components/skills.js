@@ -1,32 +1,33 @@
-import React, {Component} from 'react';
-import {Grid,Progress,Divider} from 'semantic-ui-react';
-import json from '../resume.json';
+import React, { Component } from 'react';
+import './Skills.css';
 
+class Skills extends Component {
+  render() {
+    const resumeData = this.props.resumeData;
+    const skills = resumeData?.skills || [];
 
-class Scrum extends (Component){
-  constructor(props){
-    super();
-    this.state={json}
-    }
-  render(){
-    return(
-      <div>{
-        this.state.json.skills.map((item) => 
-            <div>
-               <Grid.Row>
-                    <Grid.Column verticalAlign='middle' width={9}>
-                        <Progress percent={item.number} size='large' color={item.color}>
-                            {item.skillname}
-                        </Progress>
-                    </Grid.Column>
-                </Grid.Row> 
-                 <Divider hidden></Divider>
-             </div>
-            )}
-        
-    </div>  
-    )
- }
+    return (
+      <section id="skills">
+        <div className="container">
+          <h2 className="section-heading">Core Skills</h2>
+          <div className="skills-container">
+            {skills.map((skill, index) => (
+              <div
+                key={index}
+                className="skill-pill"
+                role="button"
+                tabIndex={0}
+                aria-label={skill.name}
+              >
+                {skill.icon && <i className={`icon-${skill.icon}`} aria-hidden="true"></i>}
+                {skill.name}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  }
 }
 
-export default Scrum;
+export default Skills;

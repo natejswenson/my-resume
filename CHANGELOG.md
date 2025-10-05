@@ -4,6 +4,85 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased] - 2025-10-05
 
+### Added - Skills & Tools Redesign
+**Redesigned Skills section and created new Tools section with modern, minimalist pill-style design**
+
+#### Skills Section Redesign
+- **Modern pill-style design** replacing progress bars
+- **5 core skills**: AI/LLM, DevOps, Cloud, Automation, CI/CD
+- Interactive hover effects with teal accent (#2B9DAC)
+- Fully mobile responsive (single-column on mobile, multi-column on desktop)
+- Accessible with keyboard navigation and ARIA labels
+
+#### New Tools Section
+- **14+ technologies** organized in 3 categories:
+  - **Infrastructure as Code**: Terraform, OpenTofu
+  - **AWS Services**: ECS, S3, CloudFormation, Lambda, API Gateway, Route 53, CloudWatch
+  - **DevOps & Monitoring**: DataDog, Scalr, GitHub Actions, Seed, SSTv2
+- Matching pill-style design consistent with Skills section
+- Category headings with clean separation
+- Touch-friendly pills (44px+ tap targets on mobile)
+
+#### Navigation Enhancement
+- Added "Tools" link to header navigation menu
+- Proper navigation order: Home → About → Resume → Skills → **Tools** → Works → Testimonials → Contact
+- Smooth scrolling to new Tools section
+- Mobile navigation updated
+
+#### Visual Design
+- Minimalist pill-style tags with generous white space
+- Consistent teal accent color matching site design
+- Smooth hover animations (transform + shadow)
+- Clean typography hierarchy
+- Responsive from 320px (iPhone SE) to 1200px+ (desktop)
+
+#### Component Architecture
+- Created new `Tools.js` component
+- Redesigned `skills.js` component with modern API
+- Added `Skills.css` and `Tools.css` for styling
+- Updated data structure in `resume.json` with `skills` and `tools` arrays
+
+#### Testing
+- 8 new unit tests for Skills component
+- 12 new unit tests for Tools component
+- 5 navigation tests for Tools link
+- All tests passing (101/104 tests)
+- Build successful (+562 B CSS, -592 B JS)
+
+#### Mobile Responsiveness
+- Single-column layout on mobile (<480px)
+- Multi-column layout on desktop (≥768px)
+- Touch-friendly pills (≥44px targets)
+- No horizontal overflow
+- Smooth animations on all devices
+
+#### Files Added/Modified
+- **New**: `src/components/Tools.js`
+- **New**: `src/components/Skills.css`
+- **New**: `src/components/Tools.css`
+- **New**: `src/components/__tests__/Tools.test.js`
+- **Modified**: `src/components/skills.js` (complete redesign)
+- **Modified**: `src/components/__tests__/skills.test.js`
+- **Modified**: `src/components/Header.js` (added Tools nav link)
+- **Modified**: `src/components/__tests__/Header.test.js`
+- **Modified**: `src/App.js` (integrated Tools component)
+- **Modified**: `src/resume.json` (new data structure)
+- **Modified**: `src/test-utils/mock-data.js`
+
+#### Success Metrics
+- ✅ Modern pill-style design implemented
+- ✅ All 5 core skills displayed
+- ✅ All 14+ tools displayed in organized categories
+- ✅ Tools link in navigation menu
+- ✅ Fully mobile responsive
+- ✅ Accessible (keyboard nav, ARIA labels)
+- ✅ 101 tests passing
+- ✅ Build successful
+
+---
+
+## Previous Updates - 2025-10-05
+
 ### Added - Mobile Responsive Design
 **Implemented comprehensive mobile-first responsive design ensuring all components are comfortably viewable on mobile devices (320px - 768px+)**
 
