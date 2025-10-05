@@ -153,16 +153,94 @@
     ],
     "tools":[
       {
+        "name":"Terraform",
         "category":"Infrastructure as Code",
-        "items":["Terraform","OpenTofu"]
+        "icon":"terraform",
+        "description":"Infrastructure as Code provisioning"
       },
       {
-        "category":"AWS Services",
-        "items":["ECS","S3","CloudFormation","Lambda","API Gateway","Route 53","CloudWatch"]
+        "name":"OpenTofu",
+        "category":"Infrastructure as Code",
+        "icon":"opentofu",
+        "description":"Open-source Terraform alternative"
       },
       {
-        "category":"DevOps & Monitoring",
-        "items":["DataDog","Scalr","GitHub Actions","Seed","SSTv2"]
+        "name":"AWS",
+        "category":"Cloud Platform",
+        "icon":"aws",
+        "description":"Amazon Web Services"
+      },
+      {
+        "name":"ECS",
+        "category":"Containers",
+        "icon":"ecs",
+        "description":"Elastic Container Service"
+      },
+      {
+        "name":"S3",
+        "category":"Storage",
+        "icon":"s3",
+        "description":"Simple Storage Service"
+      },
+      {
+        "name":"CloudFormation",
+        "category":"Infrastructure as Code",
+        "icon":"cloudformation",
+        "description":"AWS Infrastructure as Code"
+      },
+      {
+        "name":"Lambda",
+        "category":"Serverless",
+        "icon":"lambda",
+        "description":"Serverless compute functions"
+      },
+      {
+        "name":"API Gateway",
+        "category":"Serverless",
+        "icon":"apigateway",
+        "description":"API management service"
+      },
+      {
+        "name":"Route 53",
+        "category":"Networking",
+        "icon":"route53",
+        "description":"DNS and traffic management"
+      },
+      {
+        "name":"CloudWatch",
+        "category":"Monitoring",
+        "icon":"cloudwatch",
+        "description":"Monitoring and observability"
+      },
+      {
+        "name":"DataDog",
+        "category":"Monitoring",
+        "icon":"datadog",
+        "description":"Application performance monitoring"
+      },
+      {
+        "name":"Scalr",
+        "category":"CI/CD",
+        "icon":"scalr",
+        "description":"Terraform automation platform"
+      },
+      {
+        "name":"GitHub Actions",
+        "category":"CI/CD",
+        "icon":"github",
+        "description":"CI/CD automation workflows"
+      },
+      {
+        "name":"Seed",
+        "category":"Serverless",
+        "icon":"seed",
+        "description":"Serverless deployment platform"
+      },
+      {
+        "name":"SSTv2",
+        "category":"Serverless",
+        "icon":"sst",
+        "description":"Serverless Stack framework"
       }
     ],
     "portfolio":[
