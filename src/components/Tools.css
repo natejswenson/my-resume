@@ -1,8 +1,9 @@
-/* Tools Section Styling */
+/* Tools Section Styling - Visually Distinct from Skills */
 #tools {
   padding: 60px 0;
   background: #ffffff;
   width: 100%;
+  border-top: 3px solid #e9ecef;
 }
 
 #tools .container {
