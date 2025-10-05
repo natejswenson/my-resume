@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Grid,List, Header,Divider, Icon} from 'semantic-ui-react';
+import {Grid, Header, Icon} from 'semantic-ui-react';
 import json from '../resume.json';
 
 class Scrum extends (Component){

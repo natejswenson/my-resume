@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
-import { render } from 'react-dom';
 import json from '../resume.json'
-import {List,Header}from 'semantic-ui-react'
+import {List}from 'semantic-ui-react'
 class Scrum extends (Component){
   constructor(){
     super();
