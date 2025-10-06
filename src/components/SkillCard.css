@@ -1,0 +1,109 @@
+/* SkillCard Component Styles */
+
+.skill-card {
+  /* Layout */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* Sizing - Square cards */
+  aspect-ratio: 1;
+  padding: 1.5rem;
+  min-height: 120px;
+
+  /* Visual Design */
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+  /* Interaction */
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Reset outline for custom focus */
+  outline: none;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  border-color: #3b82f6;
+}
+
+.skill-card:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.skill-card:active {
+  transform: translateY(-2px);
+}
+
+.skill-card-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+
+.skill-card-icon {
+  font-size: 3rem;
+  color: inherit;
+  flex-shrink: 0;
+}
+
+.skill-card-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-align: center;
+  color: #1f2937;
+  line-height: 1.2;
+  margin: 0;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .skill-card {
+    padding: 1rem;
+    min-height: 100px;
+  }
+
+  .skill-card-icon {
+    font-size: 2.5rem;
+  }
+
+  .skill-card-name {
+    font-size: 0.75rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .skill-card {
+    padding: 2rem;
+  }
+
+  .skill-card-icon {
+    font-size: 3.5rem;
+  }
+
+  .skill-card-name {
+    font-size: 1rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  .skill-card {
+    border-color: #d1d5db;
+    box-shadow: none;
+    break-inside: avoid;
+  }
+
+  .skill-card:hover {
+    transform: none;
+  }
+}
