@@ -184,4 +184,69 @@ describe('Skills Component - Reimagined Grid', () => {
       });
     });
   });
+
+  describe('visual consistency with Tools section', () => {
+    it('should have all cards with colored icon containers', () => {
+      const { container } = render(<Skills />);
+      const iconContainers = container.querySelectorAll('.skill-card-icon-container');
+
+      expect(iconContainers.length).toBe(17);
+      iconContainers.forEach(iconContainer => {
+        expect(iconContainer).toHaveClass('skill-card-icon-container');
+      });
+    });
+
+    it('should have all icons inside containers', () => {
+      const { container } = render(<Skills />);
+      const cards = container.querySelectorAll('.skill-card');
+
+      cards.forEach(card => {
+        const iconContainer = card.querySelector('.skill-card-icon-container');
+        const icon = card.querySelector('.skill-card-icon');
+
+        expect(iconContainer).toContainElement(icon);
+      });
+    });
+
+    it('should have all cards with proper class structure', () => {
+      const { container } = render(<Skills />);
+      const cards = container.querySelectorAll('.skill-card');
+
+      expect(cards.length).toBe(17);
+      cards.forEach(card => {
+        expect(card).toHaveClass('skill-card');
+        expect(card.querySelector('.skill-card-icon-container')).toBeInTheDocument();
+        expect(card.querySelector('.skill-card-icon')).toBeInTheDocument();
+        expect(card.querySelector('.skill-card-name')).toBeInTheDocument();
+      });
+    });
+
+    it('should maintain proper DOM hierarchy', () => {
+      const { container } = render(<Skills />);
+      const cards = container.querySelectorAll('.skill-card');
+
+      cards.forEach(card => {
+        const iconContainer = card.querySelector('.skill-card-icon-container');
+        const icon = iconContainer.querySelector('.skill-card-icon');
+        const name = card.querySelector('.skill-card-name');
+
+        // Verify parent-child relationships
+        expect(card).toContainElement(iconContainer);
+        expect(card).toContainElement(name);
+        expect(iconContainer).toContainElement(icon);
+      });
+    });
+
+    it('should have section with proper styling classes', () => {
+      const { container } = render(<Skills />);
+      const section = container.querySelector('#skills');
+      const heading = container.querySelector('.section-heading');
+      const grid = container.querySelector('.skills-grid');
+
+      expect(section).toBeInTheDocument();
+      expect(heading).toBeInTheDocument();
+      expect(grid).toBeInTheDocument();
+      expect(grid).toHaveClass('skills-grid');
+    });
+  });
 });

@@ -1,80 +1,61 @@
-/* Skills Section - Flat Grid Redesign */
+/* Skills Section - Matching Tools Design */
 
 #skills {
   padding: 80px 0;
-  background-color: #f8f9fa;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  width: 100%;
 }
 
 #skills .container {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 20px;
 }
 
 #skills .section-heading {
-  font-size: 2.5rem;
+  font-size: 40px;
+  margin-bottom: 16px;
+  color: #212529;
   font-weight: 700;
   text-align: center;
-  color: #1f2937;
-  margin-bottom: 3rem;
 }
 
-/* Responsive Grid - Mobile First (2 columns) */
+/* Responsive Grid - Matching Tools */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  padding: 0;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  margin: 40px 0;
+  justify-items: center;
 }
 
-/* Tablet (768px+) - 4 columns */
-@media (min-width: 768px) {
+/* Responsive Design - Matching Tools */
+@media (max-width: 1024px) {
   .skills-grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  #skills {
+    padding: 60px 16px;
   }
 
   #skills .section-heading {
-    font-size: 3rem;
+    font-size: 32px;
   }
 
-  #skills .container {
-    padding: 0 2rem;
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 24px;
   }
 }
 
-/* Desktop (1024px+) - 6 columns */
-@media (min-width: 1024px) {
+@media (max-width: 480px) {
   .skills-grid {
-    grid-template-columns: repeat(6, 1fr);
-    gap: 2rem;
-  }
-
-  #skills {
-    padding: 100px 0;
-  }
-}
-
-/* Large Desktop (1440px+) - 8 columns */
-@media (min-width: 1440px) {
-  .skills-grid {
-    grid-template-columns: repeat(8, 1fr);
-    gap: 2rem;
-  }
-
-  #skills .container {
-    max-width: 1600px;
-  }
-}
-
-/* Extra small mobile (320px) */
-@media (max-width: 374px) {
-  .skills-grid {
-    gap: 0.75rem;
-  }
-
-  #skills {
-    padding: 60px 0;
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 }
 
@@ -86,12 +67,12 @@
   }
 
   .skills-grid {
-    grid-template-columns: repeat(6, 1fr);
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
   }
 
   #skills .section-heading {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
+    font-size: 32px;
+    margin-bottom: 20px;
   }
 }
