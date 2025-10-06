@@ -152,4 +152,66 @@ describe('SkillCard', () => {
       expect(screen.getByText('OpenAI')).toBeInTheDocument();
     });
   });
+
+  describe('icon container styling (matching Tools cards)', () => {
+    it('should render icon inside circular container', () => {
+      const { container } = render(<SkillCard skill={mockSkill} />);
+      const iconContainer = container.querySelector('.skill-card-icon-container');
+      expect(iconContainer).toBeInTheDocument();
+    });
+
+    it('should have icon container with proper structure', () => {
+      const { container } = render(<SkillCard skill={mockSkill} />);
+      const iconContainer = container.querySelector('.skill-card-icon-container');
+      const icon = container.querySelector('.skill-card-icon');
+
+      // Icon should be inside container
+      expect(iconContainer).toContainElement(icon);
+      expect(iconContainer).toBeInTheDocument();
+    });
+
+    it('should have correct CSS classes applied', () => {
+      const { container } = render(<SkillCard skill={mockSkill} />);
+      const iconContainer = container.querySelector('.skill-card-icon-container');
+      const icon = container.querySelector('.skill-card-icon');
+      const card = container.querySelector('.skill-card');
+
+      expect(card).toHaveClass('skill-card');
+      expect(iconContainer).toHaveClass('skill-card-icon-container');
+      expect(icon).toHaveClass('skill-card-icon');
+    });
+  });
+
+  describe('card structure matches Tools cards', () => {
+    it('should have proper DOM structure', () => {
+      const { container } = render(<SkillCard skill={mockSkill} />);
+      const card = container.querySelector('.skill-card');
+      const iconContainer = card.querySelector('.skill-card-icon-container');
+      const icon = iconContainer.querySelector('.skill-card-icon');
+      const name = card.querySelector('.skill-card-name');
+
+      expect(card).toBeInTheDocument();
+      expect(iconContainer).toBeInTheDocument();
+      expect(icon).toBeInTheDocument();
+      expect(name).toBeInTheDocument();
+
+      // Verify hierarchy
+      expect(card).toContainElement(iconContainer);
+      expect(card).toContainElement(name);
+      expect(iconContainer).toContainElement(icon);
+    });
+
+    it('should have card with skill-card class', () => {
+      const { container } = render(<SkillCard skill={mockSkill} />);
+      const card = container.querySelector('.skill-card');
+      expect(card).toHaveClass('skill-card');
+    });
+
+    it('should have name with skill-card-name class', () => {
+      const { container } = render(<SkillCard skill={mockSkill} />);
+      const name = container.querySelector('.skill-card-name');
+      expect(name).toHaveClass('skill-card-name');
+      expect(name.textContent).toBe('Terraform');
+    });
+  });
 });
